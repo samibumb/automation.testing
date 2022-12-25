@@ -1,0 +1,25 @@
+{
+  "name": "automation.testing",
+  "version": "1.0.0",
+  "description": "Automation Testing",
+  "main": "test.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samibumb/automation.testing.git"
+  },
+  "author": "Samuel-Dorin Bumb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samibumb/automation.testing/issues"
+  },
+  "homepage": "https://github.com/samibumb/automation.testing#readme",
+  "devDependencies": {
+    "cypress": "^10.9.0"
+  }
+}
