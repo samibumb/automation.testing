@@ -1,37 +1,39 @@
-import { YOUTUBE_URL, YOUTUBE_URL_IDENTIFIER } from '../constants'
+import { YOUTUBE_URL, YOUTUBE_URL_IDENTIFIER } from "../constants";
 
 class YouTubeSearchPage {
   get cookieRejectButton() {
-    return cy.get(':nth-child(1) > :nth-child(2) > yt-button-shape > .yt-spec-button-shape-next > .yt-spec-touch-feedback-shape > .yt-spec-touch-feedback-shape__fill')
+    return cy.get(
+      ":nth-child(1) > :nth-child(2) > yt-button-shape > .yt-spec-button-shape-next > .yt-spec-touch-feedback-shape > .yt-spec-touch-feedback-shape__fill",
+    );
   }
 
   get searchInput() {
-    return cy.get('[name="search_query"]')
+    return cy.get('[name="search_query"]');
   }
 
   get searchButton() {
-    return cy.get('.ytSearchboxComponentSearchButton')
+    return cy.get(".ytSearchboxComponentSearchButton");
   }
 
   visitYouTube() {
-    cy.visit(YOUTUBE_URL)
+    cy.visit(YOUTUBE_URL);
   }
 
   dismissCookie() {
-    this.cookieRejectButton.click()
+    this.cookieRejectButton.click();
   }
 
   searchFor(query) {
-    this.searchInput.click().type(query)
+    this.searchInput.click().type(query);
   }
 
   clickSearch() {
-    this.searchButton.click()
+    this.searchButton.click();
   }
 
   verifyUrlContainsYouTube() {
-    cy.url().should('include', YOUTUBE_URL_IDENTIFIER)
+    cy.url().should("include", YOUTUBE_URL_IDENTIFIER);
   }
 }
 
-export default new YouTubeSearchPage()
+export default new YouTubeSearchPage();

@@ -1,8 +1,11 @@
-describe('empty spec', () => {
-  it('passes', () => {
-    cy.visit('https://www.google.ro/')
-    cy.get('#L2AGLb > .QS5gu').click()
-    cy.get('.gLFyf').type('Speranta si prietenii colinde')
-    cy.get(':nth-child(1) > .eIPGRd').click()
-  })
-})
+import googleSearchPage from "../support/pages/googleSearchPage";
+import { GOOGLE_SEARCH_QUERY } from "../support/constants";
+
+describe("empty spec", () => {
+  it("passes", () => {
+    googleSearchPage.visitGoogle();
+    googleSearchPage.dismissCookie();
+    googleSearchPage.searchFor(GOOGLE_SEARCH_QUERY);
+    googleSearchPage.clickSearch();
+  });
+});
