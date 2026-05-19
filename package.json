@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "open": "cypress open",
+    "run": "cypress run"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,8 @@
   },
   "homepage": "https://github.com/samibumb/automation.testing#readme",
   "devDependencies": {
-    "cypress": "^10.9.0"
+    "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "cypress": "^15.13.0"
   }
 }
